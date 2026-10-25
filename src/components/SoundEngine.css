@@ -1,0 +1,38 @@
+.sound-toggle {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  background: rgba(5, 6, 10, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-mist);
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-radius: 100px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  transition: var(--transition-smooth);
+}
+
+.sound-toggle:hover {
+  border-color: var(--color-cyan);
+  color: var(--color-cream);
+  background: rgba(0, 229, 255, 0.05);
+}
+
+.sound-toggle span {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 0;
+  white-space: nowrap;
+  transition: max-width 0.5s var(--ease-out);
+}
+
+.sound-toggle:hover span {
+  max-width: 100px;
+}

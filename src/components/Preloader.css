@@ -1,0 +1,72 @@
+.preloader-container {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: var(--color-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.preloader-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.preloader-text {
+  font-size: clamp(3rem, 10vw, 8rem);
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 2rem;
+}
+
+.preloader-word {
+  display: inline-block;
+  color: var(--color-cream);
+}
+
+.preloader-progress-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preloader-percentage {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-cyan);
+  letter-spacing: 0.2em;
+}
+
+.preloader-bar {
+  width: 200px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.preloader-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-cyan), var(--color-teal));
+  transition: width 0.1s ease;
+}
+
+.preloader-bg-text {
+  position: absolute;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30vw;
+  color: rgba(255, 255, 255, 0.02);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

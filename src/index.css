@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Color Palette - Premium Oceanic */
+  --color-ink: #05060a;
+  --color-deep: #090d18;
+  --color-panel: #0d1425;
+  --color-steel: #152035;
+  --color-cyan: #00e5ff;
+  --color-teal: #00ffcc;
+  --color-gold: #f5c842;
+  --color-cream: #f0e9d6;
+  --color-mist: #8a9bbf;
+  --color-orange: #ff5e3a;
+
+  /* Spacing */
+  --space-unit: 1rem;
+  --container-padding: 5vw;
+
+  /* Transitions */
+  --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.3s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Managed by GSAP/SmoothScroll */
+  font-size: 16px;
+  background-color: var(--color-ink);
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-mist);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transform: translateZ(-30px);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-steel);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cyan);
+}

@@ -1,0 +1,113 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem var(--container-padding);
+  z-index: 500;
+  transition: var(--transition-smooth);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  color: var(--color-cream);
+}
+
+.navbar-logo span {
+  color: var(--color-cyan);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navbar-links a {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-mist);
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: var(--color-cyan);
+}
+
+.navbar-cta {
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--color-cyan);
+  color: var(--color-cyan) !important;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.navbar-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-cyan);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+}
+
+.navbar-cta:hover {
+  color: var(--color-ink) !important;
+}
+
+.navbar-cta:hover::before {
+  transform: scaleX(1);
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-cream);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .navbar-toggle {
+    display: block;
+    z-index: 600;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-ink);
+    flex-direction: column;
+    justify-content: center;
+    transition: var(--transition-smooth);
+  }
+
+  .navbar-links.active {
+    right: 0;
+  }
+
+  .navbar-links a {
+    font-size: 2rem;
+  }
+}

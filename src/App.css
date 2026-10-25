@@ -1,0 +1,5 @@
+/* Cleared default styles */
+.app-wrapper {
+  overflow: hidden;
+  background-color: var(--color-ink);
+}

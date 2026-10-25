@@ -1,0 +1,27 @@
+.portfolio-3d-container {
+  overflow: visible;
+}
+
+.project-3d-hint {
+  pointer-events: auto;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: rgba(5, 6, 10, 0.4);
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  min-width: 150px;
+  transition: var(--transition-smooth);
+}
+
+.project-3d-hint a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--color-cyan);
+  font-weight: 600;
+}
+
+.project-3d-hint a:hover {
+  letter-spacing: 0.3em;
+}

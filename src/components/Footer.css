@@ -1,0 +1,53 @@
+.footer {
+  padding: 4rem var(--container-padding);
+  background-color: var(--color-ink);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  color: var(--color-mist);
+}
+
+.footer-brand span {
+  color: var(--color-cyan);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: rgba(138, 155, 191, 0.4);
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(138, 155, 191, 0.6);
+}
+
+.footer-links a:hover {
+  color: var(--color-cyan);
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

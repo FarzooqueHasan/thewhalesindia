@@ -1,0 +1,145 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 var(--container-padding);
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 1000px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 100px;
+  margin-bottom: 2rem;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-cyan);
+}
+
+.hero-badge span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-cyan);
+}
+
+.hero-title {
+  font-size: clamp(3rem, 12vw, 9rem);
+  line-height: 0.9;
+  perspective: 1000px;
+}
+
+.title-line {
+  display: block;
+  overflow: hidden;
+}
+
+.title-line span {
+  display: inline-block;
+  color: var(--color-cream);
+}
+
+.title-line.outline span {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+}
+
+.title-line.accent span {
+  color: var(--color-cyan);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-sub {
+  max-width: 500px;
+  margin: 2.5rem auto;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary {
+  background-color: var(--color-cyan);
+  color: var(--color-ink);
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 229, 255, 0.4);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(240, 233, 214, 0.2);
+  color: var(--color-cream);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(240, 233, 214, 0.05);
+  border-color: var(--color-cream);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scroll-text {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--color-mist);
+}
+
+.scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--color-cyan), transparent);
+}
+@keyframes drip {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+.scroll-line {
+  animation: drip 2.5s infinite;
+}
